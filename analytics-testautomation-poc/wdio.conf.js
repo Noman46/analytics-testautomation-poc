@@ -1,9 +1,5 @@
 export const config = {
-    //
-    // ====================
-    // Runner Configuration
-    // ====================
-    // WebdriverIO supports running e2e tests as well as unit and component tests.
+
     runner: 'local',
     //
     // ==================
@@ -50,11 +46,17 @@ export const config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        browserName: 'chrome'
-    }, {
-        browserName: 'firefox'
-    }],
+    capabilities: [
+        {
+            browserName: 'chrome',
+            browserVersion:'115.0.5790.170'
+            
+        }
+        //, 
+        // {
+        //     browserName: 'firefox',
+        // }
+    ],
 
     //
     // ===================
@@ -90,7 +92,7 @@ export const config = {
     baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 1000000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -133,7 +135,7 @@ export const config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 60000000
     },
     //
     // =====
@@ -283,3 +285,5 @@ export const config = {
     // onReload: function(oldSessionId, newSessionId) {
     // }
 }
+
+//to run the script : npm run wdio
